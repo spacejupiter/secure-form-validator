@@ -1,5 +1,7 @@
+import { EMAIL_REGEX } from '../constant/sanitise'
+
 export const typeMap: Record<string, (value: any) => any> = {
-  email: (value) => emailRegex.test(value),
+  email: (value) => EMAIL_REGEX.test(value),
   number: (value) => typeof value === 'number' && !isNaN(value),
   string: (value) => typeof value === 'string',
   boolean: (value) => typeof value === 'boolean',
@@ -9,4 +11,4 @@ export const typeMap: Record<string, (value: any) => any> = {
   date: (value) => value instanceof Date,
 }
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+

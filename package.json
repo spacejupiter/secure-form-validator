@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:ci": "jest --ci --coverage --watchAll=false"
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "example:basic": "npm run build && node examples/basic-usage.js",
+    "example:registration": "npm run build && node examples/registration-form.js",
+    "example:contact": "npm run build && node examples/contact-form.js",
+    "example:typescript": "npx ts-node examples/typescript-example.ts"
   },
   "keywords": [],
   "author": "",
